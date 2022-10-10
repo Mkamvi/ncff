@@ -32,6 +32,7 @@ vim.keymap.set('n', '<leader>bgd', set_bg_dark)
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<cr>')
 vim.keymap.set('n', '<leader>ef', ':NvimTreeFocus<cr>')
 
+-- Telescope
 vim.keymap.set('n', '<leader>ff', function()
   require'telescope.builtin'.find_files {}
 end)
@@ -41,11 +42,11 @@ end)
 vim.keymap.set('n', '<leader>bf', function()
   require'telescope.builtin'.buffers {}
 end)
+
+-- window resize
 vim.keymap.set('n', '<leader>wx', ':x<cr>')
 vim.keymap.set('n', '-', ':sp<cr>')
 vim.keymap.set('n', '|', ':vs<cr>')
-
--- window resize
 vim.keymap.set('n', '<S-Left>', '<c-w><')
 vim.keymap.set('n', '<S-Right>', '<c-w>>')
 vim.keymap.set('n', '<S-Down>', '<c-w>-')
@@ -54,9 +55,6 @@ vim.keymap.set('n', '<S-Up>', '<c-w>+')
 -- p: plugins
 vim.keymap.set('n', '<leader>pi', ':PackerInstall<cr>')
 vim.keymap.set('n', '<leader>pc', ':PackerClean<cr>')
-
--- Tabs
-vim.keymap.set('n', '<leader>q', ':Bdelete<cr>') -- 删除tab(bufferline)
 
 -- s: search
 vim.keymap.set('n', '<leader>le', ':Lspsaga show_line_diagnostics<cr>')
@@ -127,9 +125,15 @@ end, {
 -- Tabs
 vim.keymap.set('n', '<Tab>', ':bnext<CR>')
 vim.keymap.set('n', '<S-Tab>', ':bprev<CR>')
+vim.keymap.set('n', '<leader>q', ':Bdelete<cr>') -- 删除tab(bufferline)
 
 -- 编辑
 vim.keymap.set('i', '<C-s>', '<ESC>:w<CR>')
 vim.keymap.set('n', '<C-s>', '<ESC>:w<CR>')
 -- vim.keymap.set('n', '<leader>l', line_number_toogle)
+
+
+-- nvim-spectre
+-- nnoremap <leader>S <cmd>lua require('spectre').open()<CR>
+vim.keymap.set('n', '<leader>S', require('spectre').open)
 

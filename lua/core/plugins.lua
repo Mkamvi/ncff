@@ -4,19 +4,18 @@ return require('packer').startup(function(use)
 
   -- 需要依赖
   use 'wbthomason/packer.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'kyazdani42/nvim-web-devicons'
 
   -- Fold tree
   use {
     'nvim-tree/nvim-tree.lua',
-    requires = {'nvim-tree/nvim-web-devicons' -- optional, for file icons
-    },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
   -- bufferline
   use {
-    'akinsho/bufferline.nvim',
-    requires = 'kyazdani42/nvim-web-devicons'
+    'akinsho/bufferline.nvim'
   }
   use 'moll/vim-bbye' -- for more sensible delete buffer cmd
 
@@ -34,37 +33,48 @@ return require('packer').startup(function(use)
 
   -- status line
   use {
-    'nvim-lualine/lualine.nvim',
-    requires = 'kyazdani42/nvim-web-devicons'
+    'nvim-lualine/lualine.nvim'
   }
 
   -- floating terminal
   use {
-    "akinsho/toggleterm.nvim",
-    tag = 'nightly'
+    "akinsho/toggleterm.nvim"
   }
 
-  -- file telescope
+  -- 文件查找
   use {
-    'nvim-telescope/telescope.nvim',
-    requires = 'nvim-lua/plenary.nvim'
+    'nvim-telescope/telescope.nvim'
   }
 
   -- indent guide
   use "lukas-reineke/indent-blankline.nvim"
 
-  -- startup screen
-  -- use 'leslie255/aleph-nvim'
-
   -- which-key
   use "folke/which-key.nvim"
 
+  use 'goolord/alpha-nvim'
+
+  use "lukas-reineke/lsp-format.nvim"
+  use 'windwp/nvim-spectre'
+
+  use {
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  }
+
+
+  use 'windwp/nvim-ts-autotag'
+  use 'tpope/vim-surround'
   -- use {
-  --   'goolord/alpha-nvim',
-  --   requires = {'kyazdani42/nvim-web-devicons'},
+  --   'numToStr/Comment.nvim',
   --   config = function()
-  --     require'alpha'.setup(require'alpha.themes.startify'.config)
+  --     require('Comment').setup()
   --   end
   -- }
-
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2',
+  }
+  use 'p00f/nvim-ts-rainbow'
+  use 'glepnir/dashboard-nvim'
 end)
