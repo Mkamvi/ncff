@@ -47,5 +47,6 @@ require("configs.git").config()
 require("configs.statusline").config()
 require("configs.terminal").config()
 require("configs.theme").config()
+require("configs.which-key").config()
 -- require("configs.startscreen").config()
 

@@ -56,4 +56,15 @@ return require('packer').startup(function(use)
   -- startup screen
   -- use 'leslie255/aleph-nvim'
 
+  -- which-key
+  use "folke/which-key.nvim"
+
+  -- use {
+  --   'goolord/alpha-nvim',
+  --   requires = {'kyazdani42/nvim-web-devicons'},
+  --   config = function()
+  --     require'alpha'.setup(require'alpha.themes.startify'.config)
+  --   end
+  -- }
+
 end)
