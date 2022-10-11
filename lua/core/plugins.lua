@@ -77,4 +77,25 @@ return require('packer').startup(function(use)
   }
   use 'p00f/nvim-ts-rainbow'
   use 'glepnir/dashboard-nvim'
+  use {
+    'numToStr/Comment.nvim'
+  }
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use {'kevinhwang91/nvim-hlslens'}
+  use 'norcalli/nvim-colorizer.lua'
+  -- Packer
+  use({
+    "folke/noice.nvim",
+    event = "VimEnter",
+    requires = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    }
+  })
+  use { 'folke/todo-comments.nvim', config = "require('plugins.todo-comments')" }
+
+  -- use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
+
 end)
+

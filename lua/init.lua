@@ -52,6 +52,16 @@ require("lsp-format").setup {}
 require('spectre').setup()
 require('hop').setup {}
 require("indent_blankline").setup { filetype_exclude = { "dashboard" } }
+require('Comment').setup {
+  pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook()
+}
+require('hlslens').setup({
+    calm_down = true,
+    -- nearest_only = true,
+    -- nearest_float_when = 'always'
+})
+require'colorizer'.setup()
+-- require("noice").setup()
 
 -- local home = os.getenv('HOME')
 local db = require('dashboard')
