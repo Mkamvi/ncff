@@ -129,6 +129,7 @@ vim.keymap.set('n', '<leader>q', ':Bdelete<cr>') -- 删除tab(bufferline)
 
 -- 编辑
 vim.keymap.set('i', '<C-s>', '<ESC>:w<CR>')
+vim.keymap.set('n', '<leader>f', '<ESC>:Prettier<CR>')
 vim.keymap.set('n', '<C-s>', '<ESC>:w<CR>')
 -- vim.keymap.set('n', '<leader>l', line_number_toogle)
 
@@ -136,4 +137,3 @@ vim.keymap.set('n', '<C-s>', '<ESC>:w<CR>')
 -- nvim-spectre
 -- nnoremap <leader>S <cmd>lua require('spectre').open()<CR>
 vim.keymap.set('n', '<leader>S', require('spectre').open)
-
