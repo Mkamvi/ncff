@@ -30,6 +30,8 @@ return require('packer').startup(function(use)
   -- 像VSCode一样的代码提示弹窗
   use 'onsails/lspkind-nvim'
 
+
+  -- 看到这了🤪
   -- Fold tree
   use {
     'nvim-tree/nvim-tree.lua',
@@ -130,6 +132,16 @@ return require('packer').startup(function(use)
 }
 
   -- use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
+  use {
+    "folke/trouble.nvim",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
 end)
 
