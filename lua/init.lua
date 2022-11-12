@@ -13,8 +13,8 @@ vim.opt.termguicolors = true
 vim.opt.shiftround = true
 -- 交换文件写入磁盘的更新时间
 vim.opt.updatetime = 100
--- 高亮光标行
-vim.opt.cursorline = true
+-- 高亮光标行 试下Cmd + \ 😍
+-- vim.opt.cursorline = true
 -- 自动写入
 vim.opt.autowrite = true
 if (vim.fn.has('termguicolors') == 1) then
@@ -26,12 +26,14 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 -- 允许使用鼠标(a: all)
-vim.opt.mouse = 'i'
+vim.opt.mouse = 'ni'
 -- 替换tab
 vim.opt.expandtab = true
 
-vim.g.loaded = 1
-vim.g.loaded_netrwPlugin = 1
+-- vim.g.loaded = 1
+-- vim.g.loaded_netrwPlugin = 1
+-- 配置代码片段
+vim.g.vsnip_snippet_dir = './.vsnip'
 
 -- 插件
 require("core.plugins")

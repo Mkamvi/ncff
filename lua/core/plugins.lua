@@ -2,15 +2,20 @@
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 
-  -- 需要依赖
+  -- 公共依赖
   use 'wbthomason/packer.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'kyazdani42/nvim-web-devicons'
-  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
-  use 'jose-elias-alvarez/null-ls.nvim'
-  use('MunifTanjim/prettier.nvim')
 
-    -- nvim-cmp
+  -- 一些常用的LSP配置  有些插件还有依赖
+  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+  --  使用LSP Hook
+  use 'jose-elias-alvarez/null-ls.nvim'
+
+
+  use('MunifTanjim/prettier.nvim')
+  
+  -- 代码补全
   use 'hrsh7th/cmp-nvim-lsp' -- { name = nvim_lsp }
   use 'hrsh7th/cmp-buffer'   -- { name = 'buffer' },
   use 'hrsh7th/cmp-path'     -- { name = 'path' }
@@ -19,8 +24,10 @@ return require('packer').startup(function(use)
   -- vsnip
   use 'hrsh7th/cmp-vsnip'    -- { name = 'vsnip' }
   use 'hrsh7th/vim-vsnip'
+  -- 提供了大量的代码片段
   use 'rafamadriz/friendly-snippets'
   -- lspkind
+  -- 像VSCode一样的代码提示弹窗
   use 'onsails/lspkind-nvim'
 
   -- Fold tree
@@ -109,7 +116,18 @@ return require('packer').startup(function(use)
       "rcarriga/nvim-notify",
     }
   })
-  use { 'folke/todo-comments.nvim', config = "require('plugins.todo-comments')" }
+  -- use { 'folke/todo-comments.nvim', config = "require('plugins.todo-comments')" }
+  use {
+  "folke/todo-comments.nvim",
+  requires = "nvim-lua/plenary.nvim",
+  config = function()
+    require("todo-comments").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
 
   -- use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
 

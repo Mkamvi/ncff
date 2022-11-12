@@ -34,7 +34,13 @@ cmp.setup {
     }),
 
   -- 快捷键
-  mapping = require'keybindings'.cmp(cmp),
+  -- mapping = require'keybindings'.cmp(cmp),
+  mapping = cmp.mapping.preset.insert({
+    ['<CR>'] = cmp.mapping.confirm({ 
+      select = true ,
+      behavior = cmp.ConfirmBehavior.Replace
+    }), 
+  }),
   -- 使用lspkind-nvim显示类型图标
   formatting = {
     format = lspkind.cmp_format({

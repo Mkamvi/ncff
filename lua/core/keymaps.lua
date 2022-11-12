@@ -123,8 +123,8 @@ end, {
 })
 
 -- Tabs
-vim.keymap.set('n', '<Tab>', ':bnext<CR>')
-vim.keymap.set('n', '<S-Tab>', ':bprev<CR>')
+-- vim.keymap.set('n', '<Tab>', ':bnext<CR>')
+-- vim.keymap.set('n', '<S-Tab>', ':bprev<CR>')
 vim.keymap.set('n', '<leader>q', ':Bdelete<cr>') -- 删除tab(bufferline)
 
 -- 编辑

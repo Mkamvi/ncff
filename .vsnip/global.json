@@ -1,0 +1,84 @@
+{
+  "author": {
+    "prefix": "ar",
+    "body": [
+      "/**",
+      " * @author Yanreni",
+      " * @date $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+      " */",
+      "$0"
+    ]
+  },
+  "console.log": {
+    "prefix": "cl",
+    "body": "console.log($0)"
+  },
+  "double console": {
+    "prefix": "cld",
+    "body": [
+      "console.log(`-----  $1 start  -----`);",
+      "console.log($0);",
+      "console.log(`-----  $1 end  -----`);"
+    ]
+  },
+  "color console": {
+    "prefix": "ccl",
+    "body": ["console.log(`%c $0`, 'color: green; background-color: yellow;');"]
+  },
+  "react function component": {
+    "prefix": "rfc",
+    "body": [
+      "/**",
+      " * author Yanreni",
+      " * date $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+      " */",
+      "",
+      "import React from 'react';",
+      "",
+      "interface $0Props {",
+      "",
+      "}",
+      "",
+      "const $0: React.FC<$0Props> = () => {",
+      "  return (",
+      "    <div>你好</div>",
+      "  )",
+      "}",
+      "",
+      "export default $0;"
+    ]
+  },
+  "import i18n": {
+    "prefix": "i18",
+    "body": ["import breezeI18n from \"../../i18n\";"]
+  },
+  "Table scroll x": {
+    "prefix": "tsx",
+    "body": "columns.reduce((acc, { width = 0 }) => { return acc + width; }, 0)"
+  },
+  "DOC MDX": {
+    "prefix": "dmdx",
+    "body": [
+      "import ExternalLink from '@/components/ExternalLink.vue'",
+      "",
+      "# $0 {': .text-center '}",
+      "### 来源",
+      "- <ExternalLink href=\"\">",
+      "MDN: ",
+      "</ExternalLink>"
+    ]
+  },
+  "TS Ignore": {
+    "prefix": "tsi",
+    "body": ["// @ts-ignore // TODO Remove me !!!"]
+  },
+  "Import Hzero Ui": {
+    "prefix": "ihu",
+    "body": ["import { $0} from 'hzero-ui';"]
+  },
+  "Import Hzero Interface": {
+    "prefix": "ihi",
+    "body": ["import { $0 } from 'hzero-ui/lib/$1';"]
+  }
+}
+
