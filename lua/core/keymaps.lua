@@ -123,10 +123,20 @@ end, {
 })
 
 -- Tabs
-vim.keymap.set('n', '<Tab>', ':bnext<CR>')
-vim.keymap.set('n', '<S-Tab>', ':bprev<CR>')
+vim.keymap.set('n', 'b]', ':bnext<CR>')
+vim.keymap.set('n', 'b[', ':bprev<CR>')
 vim.keymap.set('n', '<leader>q', ':Bdelete<cr>') -- 删除tab(bufferline)
 vim.keymap.set('n', '<leader>aq', ':bufdo :Bdelete<cr>') -- 删除tab(bufferline)
+vim.keymap.set('n', '<leader>1', function() require("bufferline").go_to_buffer(1, true) end)
+vim.keymap.set('n', '<leader>2', function() require("bufferline").go_to_buffer(2, true) end)
+vim.keymap.set('n', '<leader>3', function() require("bufferline").go_to_buffer(3, true) end)
+vim.keymap.set('n', '<leader>4', function() require("bufferline").go_to_buffer(4, true) end)
+vim.keymap.set('n', '<leader>5', function() require("bufferline").go_to_buffer(5, true) end)
+vim.keymap.set('n', '<leader>6', function() require("bufferline").go_to_buffer(6, true) end)
+vim.keymap.set('n', '<leader>7', function() require("bufferline").go_to_buffer(7, true) end)
+vim.keymap.set('n', '<leader>8', function() require("bufferline").go_to_buffer(8, true) end)
+vim.keymap.set('n', '<leader>9', function() require("bufferline").go_to_buffer(9, true) end)
+vim.keymap.set('n', '<leader>-1', function() require("bufferline").go_to_buffer(-1, true) end)
 
 -- 编辑
 vim.keymap.set('i', '<C-s>', '<ESC>:w<CR>')
