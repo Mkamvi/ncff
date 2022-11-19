@@ -139,3 +139,14 @@ vim.keymap.set('n', '<C-s>', '<ESC>:w<CR>')
 -- nvim-spectre
 -- nnoremap <leader>S <cmd>lua require('spectre').open()<CR>
 vim.keymap.set('n', '<leader>S', require('spectre').open)
+
+
+-- Hop
+vim.keymap.set('n', '<leader>l', ':HopLine<CR>')
+vim.keymap.set('n', '<leader>w', ':HopWord<CR>')
+vim.keymap.set('n', '<leader>lw', ':HopWordCurrentLine<CR>')
+
+
+
+
+

@@ -50,8 +50,13 @@ require("configs.statusline").config()
 require("configs.terminal").config()
 require("configs.theme").config()
 require("configs.which-key").config()
-require("lsp-format").setup {}
+
+-- require("lsp-format").setup {}
+-- require("lspconfig").gopls.setup { on_attach = require("lsp-format").on_attach }
+
+-- 全局替换
 require('spectre').setup()
+
 require('hop').setup {}
 
 vim.opt.list = true

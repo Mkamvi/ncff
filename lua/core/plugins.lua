@@ -70,35 +70,38 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim'
   }
 
-  -- indent guide
+  -- 缩进空格高亮
   use "lukas-reineke/indent-blankline.nvim"
 
-  -- which-key
+  -- 辅助快捷键提示  考虑删掉
   use "folke/which-key.nvim"
 
-  use 'goolord/alpha-nvim'
+  -- 首页欢迎
+  -- use 'goolord/alpha-nvim'
 
-  use "lukas-reineke/lsp-format.nvim"
+  -- use "lukas-reineke/lsp-format.nvim"
+
+  -- 全局搜索/替换
   use 'windwp/nvim-spectre'
 
+
+  -- Markdown预览
   use {
-    "iamcco/markdown-preview.nvim",
+    'iamcco/markdown-preview.nvim',
     run = function() vim.fn["mkdp#util#install"]() end,
   }
 
-
+  -- 自动闭合标签
   use 'windwp/nvim-ts-autotag'
+
+  -- 快速处理单引号、括号等符号
   use 'tpope/vim-surround'
-  -- use {
-  --   'numToStr/Comment.nvim',
-  --   config = function()
-  --     require('Comment').setup()
-  --   end
-  -- }
+
   use {
     'phaazon/hop.nvim',
     branch = 'v2',
   }
+
   use 'p00f/nvim-ts-rainbow'
   use 'glepnir/dashboard-nvim'
   use {
