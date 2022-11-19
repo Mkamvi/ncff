@@ -96,16 +96,7 @@ vim.keymap.set('n', '<leader>wl', function()
 end)
 
 -- t: terminal
--- use <f5> to toggle terminal, this can be set in lua/configs/terminal.lua
--- the default position is also set in lua/configs/terminal.lua
 vim.keymap.set('t', '<C-g>', '<C-\\><C-n>')
-vim.keymap.set('n', '<leader>tt', ':ToggleTerm direction=tab<cr>')
-vim.keymap.set('n', '<leader>tn', function()
-  Terminal:new():toggle()
-end)
-vim.keymap.set('n', '<leader>tf', ':ToggleTerm direction=float<cr>')
-vim.keymap.set('n', '<leader>th', ':ToggleTerm direction=horizontal<cr>')
-vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical<cr>')
 
 -- h: git
 vim.keymap.set('n', '<leader>hs', '::Gitsigns stage_hunk<cr>')
