@@ -4,7 +4,7 @@ function M.config()
   require('bufferline').setup {
     options = {
       mode = "buffers", -- set to "tabs" to only show tabpages instead
-      numbers = "none",
+      numbers = "ordinal",
       close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
       right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
       left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
@@ -67,7 +67,7 @@ function M.config()
       offsets = {{
         filetype = "NvimTree",
         text = "File Explorer",
-        text_align = "center"
+        text_align = "center",
       }, {
         filetype = "SymbolsOutline",
         text = "Symbols Outline",
@@ -85,7 +85,7 @@ function M.config()
       separator_style = "thin",
       enforce_regular_tabs = false,
       always_show_bufferline = true,
-      sort_by = 'id'
+      sort_by = 'relative_directory'
     }
   }
 end

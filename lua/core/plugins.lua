@@ -30,18 +30,17 @@ return require('packer').startup(function(use)
   -- 像VSCode一样的代码提示弹窗
   use 'onsails/lspkind-nvim'
 
-
-  -- 看到这了🤪
   -- Fold tree
   use {
     'nvim-tree/nvim-tree.lua',
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
-  -- bufferline
+  -- 标签
   use {
     'akinsho/bufferline.nvim'
   }
+  -- <leader>q + <leader>aq 快速关闭标签
   use 'moll/vim-bbye' -- for more sensible delete buffer cmd
 
   -- language
