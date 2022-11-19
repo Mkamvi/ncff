@@ -30,8 +30,9 @@ vim.opt.mouse = 'ni'
 -- 替换tab
 vim.opt.expandtab = true
 
--- vim.g.loaded = 1
--- vim.g.loaded_netrwPlugin = 1
+-- nvim-tree
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
 -- 配置代码片段
 vim.g.vsnip_snippet_dir = '~/.config/nvim/.vsnip'
 
@@ -81,7 +82,10 @@ require'colorizer'.setup()
 -- require("noice").setup()
 
 -- local home = os.getenv('HOME')
-local db = require('dashboard')
+-- local db = require('dashboard')
+-- db:instance(false)
+require('configs.dashboard')
+
 
 require("null-ls").setup({
   on_attach = function(client, bufnr)

@@ -97,13 +97,24 @@ return require('packer').startup(function(use)
   -- 快速处理单引号、括号等符号
   use 'tpope/vim-surround'
 
+  -- 快速跳转
   use {
     'phaazon/hop.nvim',
     branch = 'v2',
   }
 
+  -- 代码块颜色区分
   use 'p00f/nvim-ts-rainbow'
-  use 'glepnir/dashboard-nvim'
+
+
+  -- fancy start screen
+  use {
+    "glepnir/dashboard-nvim",
+    -- event = "VimEnter",
+    -- cond = true,
+    -- config = [[require('configs.dashboard')]]
+  }
+
   use {
     'numToStr/Comment.nvim'
   }
