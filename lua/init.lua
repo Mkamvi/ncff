@@ -53,7 +53,17 @@ require("configs.which-key").config()
 require("lsp-format").setup {}
 require('spectre').setup()
 require('hop').setup {}
-require("indent_blankline").setup { filetype_exclude = { "dashboard" } }
+
+vim.opt.list = true
+vim.opt.listchars:append "eol:↴"
+vim.opt.listchars:append "space:⋅"
+
+require("indent_blankline").setup {
+  filetype_exclude = { "dashboard" },
+  show_end_of_line = true,
+  show_current_context = true,
+  show_current_context_start = true,
+}
 require('Comment').setup {
   pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook()
 }
