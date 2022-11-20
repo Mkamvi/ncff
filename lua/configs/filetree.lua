@@ -45,8 +45,8 @@ function M.config()
         custom_only = false,
         list = {}
       },
-      number = true,
-      relativenumber = true,
+      -- number = true,
+      -- relativenumber = true,
       signcolumn = "yes"
     },
     trash = {

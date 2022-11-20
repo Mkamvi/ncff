@@ -1,5 +1,3 @@
--- ---------------  基础  --------------------
---
 -- 语法高亮
 vim.cmd('syntax on')
 
@@ -8,7 +6,7 @@ vim.cmd('filetype plugin indent on')
 -- 展示行号
 vim.opt.number = true
 -- 相对行号
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 -- 24Bit颜色
 vim.opt.termguicolors = true
 -- 缩进宽度对齐到 shiftwidth 的整数倍
