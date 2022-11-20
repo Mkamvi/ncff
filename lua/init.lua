@@ -43,6 +43,7 @@ require("core.keymaps")
 -- 主题
 require("core.theme")
 
+-- TODO:  配置目录重构
 require("configs.filetree").config()
 require("configs.bufferline").config()
 require("configs.treesitter").config()
