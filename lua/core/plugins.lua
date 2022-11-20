@@ -119,9 +119,14 @@ return require('packer').startup(function(use)
     'numToStr/Comment.nvim'
   }
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+
+  -- 更好的搜索展示
   use {'kevinhwang91/nvim-hlslens'}
+
+  -- 高亮色
   use 'norcalli/nvim-colorizer.lua'
-  -- Packer
+
+  -- 好看的通知样式
   use({
     "folke/noice.nvim",
     event = "VimEnter",
@@ -131,18 +136,13 @@ return require('packer').startup(function(use)
       "rcarriga/nvim-notify",
     }
   })
-  -- use { 'folke/todo-comments.nvim', config = "require('plugins.todo-comments')" }
+
+  -- NOTE: 看后面有冒号
   use {
-  "folke/todo-comments.nvim",
-  requires = "nvim-lua/plenary.nvim",
-  config = function()
-    require("todo-comments").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end
-}
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+  }
+
 
   -- use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
   use {
