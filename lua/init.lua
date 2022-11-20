@@ -148,7 +148,8 @@ require("trouble").setup {
 
 require("mason").setup()
 
-require'lspconfig'.sumneko_lua.setup {
+local lsc = require('lspconfig')
+lsc.sumneko_lua.setup {
   settings = {
     Lua = {
       runtime = {
@@ -174,3 +175,10 @@ require'lspconfig'.sumneko_lua.setup {
 
 
 
+lsc.volar.setup{
+ init_options = {
+   typescript = {
+     tsdk = "/Users/Eoyd/pnpm-global/5/node_modules/typescript/lib",
+   },
+ },
+}
