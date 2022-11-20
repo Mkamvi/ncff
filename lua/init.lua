@@ -1,6 +1,8 @@
 -- ---------------  基础  --------------------
+--
 -- 语法高亮
 vim.cmd('syntax on')
+
 -- 文件类型加载插件缩进
 vim.cmd('filetype plugin indent on')
 -- 展示行号
@@ -117,7 +119,8 @@ require("prettier").setup({
     "typescript",
     "typescriptreact",
     "yaml",
-    "vue"
+    "vue",
+    'lua'
   },
 })
 -- require('nvm-ts-autotag').setup()
@@ -128,3 +131,47 @@ require("todo-comments").setup {
 -- or leave it empty to use the default settings
 -- refer to the configuration section below
 }
+
+require("lsp-colors").setup({
+  Error = "#db4b4b",
+  Warning = "#e0af68",
+  Information = "#0db9d7",
+  Hint = "#10B981"
+})
+
+require("trouble").setup {
+-- your configuration comes here
+-- or leave it empty to use the default settings
+-- -- refer to the configuration section below
+  -- c = true
+}
+      
+
+require("mason").setup()
+
+require'lspconfig'.sumneko_lua.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
+
+
+
+

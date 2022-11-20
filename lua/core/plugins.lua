@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
 
   -- 一些常用的LSP配置  有些插件还有依赖
+  use { "williamboman/mason.nvim" }
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   --  使用LSP Hook
   use 'jose-elias-alvarez/null-ls.nvim'
@@ -143,17 +144,13 @@ return require('packer').startup(function(use)
     requires = "nvim-lua/plenary.nvim",
   }
 
+  use 'folke/lsp-colors.nvim'
+
 
   -- use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
   use {
     "folke/trouble.nvim",
-    config = function()
-      require("trouble").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    end
+    requires = "kyazdani42/nvim-web-devicons",
   }
 
 end)
