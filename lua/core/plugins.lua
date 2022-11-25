@@ -21,8 +21,10 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'  -- { name = 'cmdline' }
   use 'hrsh7th/nvim-cmp'
   -- 代码片段
+  use 'golang/vscode-go'
   use 'hrsh7th/cmp-vsnip'    -- { name = 'vsnip' }
   use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/vim-vsnip-integ'
   -- 提供了大量的代码片段
   use 'rafamadriz/friendly-snippets'
   -- 像VSCode一样的代码提示弹窗
@@ -46,6 +48,12 @@ return require('packer').startup(function(use)
 
   -- Themes
   use 'projekt0n/github-nvim-theme'
+  use {
+    "ellisonleao/gruvbox.nvim",
+    requires = {"rktjmp/lush.nvim"}
+  }
+  use 'folke/tokyonight.nvim'
+
 
   -- Git
   use {
@@ -115,13 +123,13 @@ return require('packer').startup(function(use)
   -- 更好的搜索展示
   use {'kevinhwang91/nvim-hlslens'}
 
-  -- 高亮区块色
+  -- 颜色高亮
   use 'norcalli/nvim-colorizer.lua'
 
   -- 好看的通知样式
   use({
     "folke/noice.nvim",
-    event = "VimEnter",
+    -- event = "VimEnter",
     requires = {
       -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
       "MunifTanjim/nui.nvim",
@@ -143,8 +151,12 @@ return require('packer').startup(function(use)
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
   }
-  
+
   -- 格式化
   use('MunifTanjim/prettier.nvim')
+
+  use {
+    "folke/zen-mode.nvim",
+  }
 end)
 

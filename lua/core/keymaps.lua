@@ -60,8 +60,8 @@ end, {
 })
 
 -- Tabs
-vim.keymap.set('n', 'b]', ':bnext<CR>')
-vim.keymap.set('n', 'b[', ':bprev<CR>')
+vim.keymap.set('n', ']b', ':bnext<CR>')
+vim.keymap.set('n', '[b', ':bprev<CR>')
 vim.keymap.set('n', '<leader>q', ':Bdelete<cr>') -- 删除tab(bufferline)
 vim.keymap.set('n', '<leader>aq', ':bufdo :Bdelete<cr>') -- 删除tab(bufferline)
 vim.keymap.set('n', '<leader>1', function() require("bufferline").go_to_buffer(1, true) end)

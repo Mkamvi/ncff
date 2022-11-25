@@ -1,12 +1,11 @@
 -- 语法高亮
 vim.cmd('syntax on')
-
 -- 文件类型加载插件缩进
 vim.cmd('filetype plugin indent on')
 -- 展示行号
 vim.opt.number = true
 -- 相对行号
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 -- 24Bit颜色
 vim.opt.termguicolors = true
 -- 缩进宽度对齐到 shiftwidth 的整数倍
@@ -75,12 +74,14 @@ require('Comment').setup {
   pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook()
 }
 require('hlslens').setup({
-    calm_down = true,
-    -- nearest_only = true,
-    -- nearest_float_when = 'always'
+  calm_down = true,
+  -- nearest_only = true,
+  -- nearest_float_when = 'always'
 })
 require'colorizer'.setup()
--- require("noice").setup()
+require("noice").setup({
+  -- add any options here
+})
 
 -- local home = os.getenv('HOME')
 -- local db = require('dashboard')
@@ -104,7 +105,7 @@ require("null-ls").setup({
 })
 
 require("prettier").setup({
-  bin = 'prettier', -- or `'prettierd'` (v0.22+)
+  bin = 'npx prettier', -- or `'prettierd'` (v0.22+)
   filetypes = {
     "css",
     "graphql",
@@ -126,9 +127,9 @@ require("prettier").setup({
 --
 --
 require("todo-comments").setup {
--- your configuration comes here
--- or leave it empty to use the default settings
--- refer to the configuration section below
+  -- your configuration comes here
+  -- or leave it empty to use the default settings
+  -- refer to the configuration section below
 }
 
 require("lsp-colors").setup({
@@ -139,12 +140,12 @@ require("lsp-colors").setup({
 })
 
 require("trouble").setup {
--- your configuration comes here
--- or leave it empty to use the default settings
--- -- refer to the configuration section below
+  -- your configuration comes here
+  -- or leave it empty to use the default settings
+  -- -- refer to the configuration section below
   -- c = true
 }
-      
+
 
 require("mason").setup()
 
@@ -176,9 +177,18 @@ lsc.sumneko_lua.setup {
 
 
 lsc.volar.setup{
- init_options = {
-   typescript = {
-     tsdk = "/Users/Eoyd/pnpm-global/5/node_modules/typescript/lib",
-   },
- },
+  init_options = {
+    typescript = {
+      tsdk = "/Users/Eoyd/pnpm-global/5/node_modules/typescript/lib",
+    },
+  },
+}
+
+lsc.html.setup {
+}
+
+require("zen-mode").setup {
+  -- your configuration comes here
+  -- or leave it empty to use the default settings
+  -- refer to the configuration section below
 }
