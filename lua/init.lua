@@ -105,7 +105,7 @@ require("null-ls").setup({
 })
 
 require("prettier").setup({
-  bin = 'npx prettier', -- or `'prettierd'` (v0.22+)
+  bin = 'prettier', -- or `'prettierd'` (v0.22+)
   filetypes = {
     "css",
     "graphql",
@@ -125,12 +125,12 @@ require("prettier").setup({
 })
 -- require('nvm-ts-autotag').setup()
 --
---
-require("todo-comments").setup {
+-- TODO: 
+require("todo-comments").setup ({
   -- your configuration comes here
   -- or leave it empty to use the default settings
   -- refer to the configuration section below
-}
+})
 
 require("lsp-colors").setup({
   Error = "#db4b4b",
@@ -147,10 +147,12 @@ require("trouble").setup {
 }
 
 
-require("mason").setup()
+-- require("mason").setup()
+require("nvim-lsp-installer").setup({
+  automatic_installation = true
+})
 
-local lsc = require('lspconfig')
-lsc.sumneko_lua.setup {
+require'lspconfig'.sumneko_lua.setup {
   settings = {
     Lua = {
       runtime = {
@@ -175,8 +177,7 @@ lsc.sumneko_lua.setup {
 
 
 
-
-lsc.volar.setup{
+require'lspconfig'.volar.setup{
   init_options = {
     typescript = {
       tsdk = "/Users/Eoyd/pnpm-global/5/node_modules/typescript/lib",
@@ -184,7 +185,7 @@ lsc.volar.setup{
   },
 }
 
-lsc.html.setup {
+require'lspconfig'.html.setup {
 }
 
 require("zen-mode").setup {
