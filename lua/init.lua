@@ -147,10 +147,10 @@ require("trouble").setup {
 }
 
 
--- require("mason").setup()
-require("nvim-lsp-installer").setup({
-  automatic_installation = true
-})
+require("mason").setup()
+-- require("nvim-lsp-installer").setup({
+--   automatic_installation = true
+-- })
 
 require'lspconfig'.sumneko_lua.setup {
   settings = {

@@ -8,8 +8,8 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
 
   --  LSP管理
-  -- use { "williamboman/mason.nvim" }
-  use 'williamboman/nvim-lsp-installer'
+  use { "williamboman/mason.nvim" }
+  -- use 'williamboman/nvim-lsp-installer'
   -- 通用LSP配置
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   --  使用LSP Hook
