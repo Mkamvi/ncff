@@ -1,3 +1,4 @@
+
 -- leader ^-^
 vim.g.mapleader = ';'
 

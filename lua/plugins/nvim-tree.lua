@@ -1,6 +1,3 @@
-local M = {}
-function M.config()
-  -- nvim-tree config
   require'nvim-tree'.setup {
     disable_netrw = true,
     hijack_netrw = true,
@@ -87,6 +84,3 @@ function M.config()
         \   }
         \ }
     ]])
-end
-
-return M
