@@ -6,16 +6,17 @@ vim.opt.relativenumber = true
 -- 24Bit颜色
 vim.opt.termguicolors = true
 -- 缩进宽度对齐到 shiftwidth 的整数倍
-vim.opt.shiftround = true
+-- vim.opt.shiftround = true
 -- 交换文件写入磁盘的更新时间
-vim.opt.updatetime = 100
--- 高亮光标行 试下Cmd + \ 😍
+vim.opt.updatetime = 3000
+-- 高亮光标行 试下Cmd + / 😍
 -- vim.opt.cursorline = true
 -- 自动写入
-vim.opt.autowrite = true
+-- vim.opt.autowrite = true
 
 -- 真色彩
 vim.opt.termguicolors = true
+
 -- tab
 vim.opt.autoindent = true
 vim.opt.tabstop = 2
