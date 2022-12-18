@@ -17,8 +17,12 @@ require("toggleterm").setup {
   highlights = {
     -- highlights which map to a highlight group name and a table of it's values
     -- NOTE: this is only a subset of values, any group placed here will be set for the terminal window split
+    NormalFloat = {
+      guifg='#05f508',
+      -- guibg = 'NONE',
+    }
   },
-  shade_terminals = true, -- NOTE: this option takes priority over highlights specified so if you specify Normal highlights you should set this to false
+  shade_terminals = false, -- NOTE: this option takes priority over highlights specified so if you specify Normal highlights you should set this to false
   shading_factor = '1', -- the degree by which to darken to terminal colour, default: 1 for dark backgrounds, 3 for light
   start_in_insert = true,
   insert_mappings = true, -- whether or not the open mapping applies in insert mode
@@ -39,7 +43,7 @@ require("toggleterm").setup {
     -- like `size`, width and height can be a number or function which is passed the current terminal
     width = 140,
     height = 50,
-    winblend = 1
+    -- winblend = 1
   },
   winbar = {
     enabled = false,
