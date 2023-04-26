@@ -1,4 +1,7 @@
 require('lualine').setup {
+  options = {
+    theme = 'nightly'
+  },
   sections = {
     lualine_c = {
       {

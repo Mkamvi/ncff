@@ -3,7 +3,7 @@
     "prefix": "ar",
     "body": [
       "/**",
-      " * @author Yanreni",
+      " * @author M.k",
       " * @date $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
       " */",
       "$0"
@@ -29,7 +29,7 @@
     "prefix": "rfc",
     "body": [
       "/**",
-      " * author Yanreni",
+      " * author M.k",
       " * date $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
       " */",
       "",

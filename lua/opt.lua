@@ -2,7 +2,7 @@
 -- 展示行号
 vim.opt.number = true
 -- 相对行号
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 -- 24Bit颜色
 vim.opt.termguicolors = true
 -- 缩进宽度对齐到 shiftwidth 的整数倍
@@ -30,3 +30,6 @@ vim.opt.expandtab = true
 vim.opt.list = true
 vim.opt.listchars:append "eol:↴"
 vim.opt.listchars:append "space:⋅"
+
+-- 剪切板
+vim.opt.clipboard = 'unnamedplus'

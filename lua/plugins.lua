@@ -1,4 +1,3 @@
-
 -- Plugins
 vim.cmd [[packadd packer.nvim]]
 
@@ -12,9 +11,9 @@ vim.cmd([[
 return require('packer').startup(function(use)
 
   -- 公共依赖
-  use { 
-    'wbthomason/packer.nvim' ,
-    config = function ()
+  use {
+    'wbthomason/packer.nvim',
+    config = function()
       require("mason").setup()
     end
   }
@@ -22,35 +21,37 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
 
   --  LSP管理
-  use { "williamboman/mason.nvim" }
+  use {"williamboman/mason.nvim"}
   -- use 'williamboman/nvim-lsp-installer'
   -- 通用LSP配置
-  use { 
+  use {
     'neovim/nvim-lspconfig', -- Configurations for Nvim LSP
-    config = function ()
-      require('plugins.lspconfig') 
+    config = function()
+      require('plugins.lspconfig')
     end
   }
   --  使用LSP Hook
   use {
     'jose-elias-alvarez/null-ls.nvim',
-    config = function() require('plugins.null-ls') end
+    config = function()
+      require('plugins.null-ls')
+    end
   }
 
   -- 代码补全
   use 'hrsh7th/cmp-nvim-lsp' -- { name = nvim_lsp }
-  use 'hrsh7th/cmp-buffer'   -- { name = 'buffer' },
-  use 'hrsh7th/cmp-path'     -- { name = 'path' }
-  use 'hrsh7th/cmp-cmdline'  -- { name = 'cmdline' }
-  use { 
+  use 'hrsh7th/cmp-buffer' -- { name = 'buffer' },
+  use 'hrsh7th/cmp-path' -- { name = 'path' }
+  use 'hrsh7th/cmp-cmdline' -- { name = 'cmdline' }
+  use {
     'hrsh7th/nvim-cmp',
-    config = function ()
+    config = function()
       require('plugins.nvim-cmp')
     end
   }
   -- 代码片段
   use 'golang/vscode-go'
-  use 'hrsh7th/cmp-vsnip'    -- { name = 'vsnip' }
+  use 'hrsh7th/cmp-vsnip' -- { name = 'vsnip' }
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/vim-vsnip-integ'
   -- 提供了大量的代码片段
@@ -62,13 +63,17 @@ return require('packer').startup(function(use)
   use {
     'nvim-tree/nvim-tree.lua',
     tag = 'nightly', -- optional, updated every week. (see issue #1193)
-    config = function() require('plugins.nvim-tree') end
+    config = function()
+      require('plugins.nvim-tree')
+    end
   }
 
   -- 标签栏
   use {
     'akinsho/bufferline.nvim',
-    config = function() require('plugins.bufferline') end
+    config = function()
+      require('plugins.bufferline')
+    end
   }
   -- <leader>q + <leader>aq 快速关闭标签
   use 'moll/vim-bbye'
@@ -76,54 +81,63 @@ return require('packer').startup(function(use)
   -- 语法高亮
   use {
     'nvim-treesitter/nvim-treesitter',
-    config = function() require('plugins.treesitter') end
+    config = function()
+      require('plugins.treesitter')
+    end
   }
 
   -- Themes
+  -- use {
+  --   'projekt0n/github-nvim-theme',
+  --   config = function() require('plugins.github-theme') end
+  -- }
+  -- use {
+  --   "ellisonleao/gruvbox.nvim",
+  --   requires = {"rktjmp/lush.nvim"}
+  -- }
+  -- use 'folke/tokyonight.nvim'
   use {
-    'projekt0n/github-nvim-theme',
-    config = function() require('plugins.github-theme') end
+    "Alexis12119/nightly.nvim",
+    config = function()
+      require('plugins.nightly-theme')
+    end
   }
-  use {
-    "ellisonleao/gruvbox.nvim",
-    requires = {"rktjmp/lush.nvim"}
-  }
-  use 'folke/tokyonight.nvim'
-
 
   -- Git
-  use {
-    'lewis6991/gitsigns.nvim',
-    tag = 'release',
-    config = function() require('plugins.gitsigns') end
-  }
+  -- use {
+  --   'lewis6991/gitsigns.nvim',
+  --   tag = 'release',
+  --   config = function() require('plugins.gitsigns') end
+  -- }
 
   -- 状态栏
   use {
     'nvim-lualine/lualine.nvim',
-    config = function() require('plugins.lualine') end
+    config = function()
+      require('plugins.lualine')
+    end
   }
 
   -- 终端 
   use {
     "akinsho/toggleterm.nvim",
-    config = function() require('plugins.toggleterm') end
+    config = function()
+      require('plugins.toggleterm')
+    end
   }
 
   -- 文件查找
-  use {
-    'nvim-telescope/telescope.nvim'
-  }
+  use {'nvim-telescope/telescope.nvim'}
 
   -- 缩进空格高亮
-  use { 
+  use {
     "lukas-reineke/indent-blankline.nvim",
-    config = function ()
+    config = function()
       require("indent_blankline").setup {
-        filetype_exclude = { "dashboard" },
+        filetype_exclude = {"dashboard"},
         show_end_of_line = true,
         show_current_context = true,
-        show_current_context_start = true,
+        show_current_context_start = true
       }
     end
   }
@@ -131,11 +145,13 @@ return require('packer').startup(function(use)
   -- 辅助快捷键提示
   use {
     "folke/which-key.nvim",
-    config = function() require('plugins.which-key') end
+    config = function()
+      require('plugins.which-key')
+    end
   }
 
   -- 全局搜索/替换
-  use { 
+  use {
     'windwp/nvim-spectre',
     config = function()
       require('spectre').setup()
@@ -145,7 +161,9 @@ return require('packer').startup(function(use)
   -- Markdown预览
   use {
     'iamcco/markdown-preview.nvim',
-    run = function() vim.fn["mkdp#util#install"]() end,
+    run = function()
+      vim.fn["mkdp#util#install"]()
+    end
   }
 
   -- 自动闭合标签
@@ -158,7 +176,7 @@ return require('packer').startup(function(use)
   use {
     'phaazon/hop.nvim',
     branch = 'v2',
-    config = function ()
+    config = function()
       require('hop').setup {}
     end
   }
@@ -167,17 +185,17 @@ return require('packer').startup(function(use)
   use 'p00f/nvim-ts-rainbow'
 
   -- 启动页
-  use {
-    "glepnir/dashboard-nvim",
-    -- event = "VimEnter",
-    -- cond = true,
-    config = function () require('plugins.dashboard') end 
-  }
+  -- use {
+  --   "glepnir/dashboard-nvim",
+  --   -- event = "VimEnter",
+  --   -- cond = true,
+  --   config = function () require('plugins.dashboard') end 
+  -- }
 
   -- 注释
   use {
     'numToStr/Comment.nvim',
-    config = function ()
+    config = function()
       require('Comment').setup {
         pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook()
       }
@@ -188,9 +206,9 @@ return require('packer').startup(function(use)
   -- 更好的搜索展示
   use {
     'kevinhwang91/nvim-hlslens',
-    config = function ()
+    config = function()
       require('hlslens').setup({
-        calm_down = true,
+        calm_down = true
         -- nearest_only = true,
         -- nearest_float_when = 'always'
       })
@@ -206,27 +224,27 @@ return require('packer').startup(function(use)
   }
 
   -- 好看的通知样式
-  use({
-    "folke/noice.nvim",
-    -- event = "VimEnter",
-    requires = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-    },
-    config = function() 
-      require("noice").setup({
-        -- add any options here
-      })
-    end
-  })
+  -- use({
+  --   "folke/noice.nvim",
+  --   -- event = "VimEnter",
+  --   requires = {
+  --     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+  --     "MunifTanjim/nui.nvim",
+  --     "rcarriga/nvim-notify",
+  --   },
+  --   config = function() 
+  --     require("noice").setup({
+  --       -- add any options here
+  --     })
+  --   end
+  -- })
 
   -- NOTE: 看后面有冒号
   use {
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
-    config = function() 
-      require("todo-comments").setup ({
+    config = function()
+      require("todo-comments").setup({
         -- your configuration comes here
         -- or leave it empty to use the default settings
         -- refer to the configuration section below
@@ -235,9 +253,9 @@ return require('packer').startup(function(use)
   }
 
   -- 补充缺失的group颜色配置
-  use { 
+  use {
     'folke/lsp-colors.nvim',
-    config = function ()
+    config = function()
       require("lsp-colors").setup({
         Error = "#db4b4b",
         Warning = "#e0af68",
@@ -251,7 +269,7 @@ return require('packer').startup(function(use)
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
-    config = function ()
+    config = function()
       require("trouble").setup {
         -- your configuration comes here
         -- or leave it empty to use the default settings
@@ -262,10 +280,9 @@ return require('packer').startup(function(use)
   }
 
   -- 格式化
-  use { 
-    'MunifTanjim/prettier.nvim',
-    config = function() require('plugins.prettier') end
-  }
+  -- use { 
+  --   'MunifTanjim/prettier.nvim',
+  --   config = function() require('plugins.prettier') end
+  -- }
 end)
-
 

@@ -1,6 +1,3 @@
---
--- Yanreni --
---
 
 require('cmd')
 require('opt')
