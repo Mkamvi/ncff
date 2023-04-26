@@ -7,9 +7,4 @@ vim.cmd('filetype plugin indent on')
 -- 按照缩进折叠
 vim.cmd [[ set fdm=indent]]
 
-vim.cmd [[ set background=dark ]]
 vim.cmd "colorscheme nightly"
--- vim.cmd('colorscheme github_dark')
--- vim.cmd('colorscheme gruvbox')
---
-
