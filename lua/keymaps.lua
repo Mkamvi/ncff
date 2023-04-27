@@ -80,6 +80,7 @@ vim.keymap.set('n', '<leader>-1', function() require("bufferline").go_to_buffer(
 vim.keymap.set('i', '<C-s>', '<ESC>:w<CR>')
 vim.keymap.set('n', '<leader>f', '<ESC>:Prettier<CR>')
 vim.keymap.set('n', '<C-s>', '<ESC>:w<CR>')
+vim.keymap.set('n', '<C-l>', ':set invrelativenumber<cr>')
 
 -- 全局替换
 vim.keymap.set('n', '<leader>S', require('spectre').open)
