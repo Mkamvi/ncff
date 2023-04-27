@@ -104,11 +104,11 @@ return require('packer').startup(function(use)
   }
 
   -- Git
-  -- use {
-  --   'lewis6991/gitsigns.nvim',
-  --   tag = 'release',
-  --   config = function() require('plugins.gitsigns') end
-  -- }
+  use {
+    'lewis6991/gitsigns.nvim',
+    tag = 'release',
+    config = function() require('plugins.gitsigns') end
+  }
 
   -- 状态栏
   use {
