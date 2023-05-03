@@ -110,7 +110,6 @@ return require('packer').startup(function(use)
   use {
     "Alexis12119/nightly.nvim",
     config = function()
-      require('plugins.nightly-theme')
     end
   }
 
