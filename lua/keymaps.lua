@@ -65,6 +65,7 @@ vim.keymap.set('n', ']b', ':bnext<CR>')
 vim.keymap.set('n', '[b', ':bprev<CR>')
 vim.keymap.set('n', '<leader>q', ':Bdelete<cr>') -- 删除tab(bufferline)
 vim.keymap.set('n', '<leader>aq', ':bufdo :Bdelete<cr>') -- 删除tab(bufferline)
+vim.keymap.set('n', '<leader>aa', ':quitall<cr>') -- 删除tab(bufferline)
 vim.keymap.set('n', '<leader>1', function() require("bufferline").go_to_buffer(1, true) end)
 vim.keymap.set('n', '<leader>2', function() require("bufferline").go_to_buffer(2, true) end)
 vim.keymap.set('n', '<leader>3', function() require("bufferline").go_to_buffer(3, true) end)
@@ -90,7 +91,10 @@ vim.keymap.set('n', '<leader>l', ':HopLine<CR>')
 vim.keymap.set('n', '<leader>w', ':HopWord<CR>')
 vim.keymap.set('n', '<leader>lw', ':HopWordCurrentLine<CR>')
 
-
-
-
-
+-- DAP
+vim.keymap.set('n', '<leader>db', function ()
+  require'dap'.continue() 
+end)
+vim.keymap.set('n', '<leader>dbs', function ()
+  require'dap'.toggle_breakpoint()
+end)

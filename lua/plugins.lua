@@ -289,10 +289,10 @@ return require('packer').startup(function(use)
   }
 
   -- 格式化
-  -- use { 
-    --   'MunifTanjim/prettier.nvim',
-    --   config = function() require('plugins.prettier') end
-    -- }
+  use {
+    'MunifTanjim/prettier.nvim',
+    config = function() require('plugins.prettier') end
+  }
 
   -- use 'mfussenegger/nvim-dap'
   --
