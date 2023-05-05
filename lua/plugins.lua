@@ -108,7 +108,7 @@ return require('packer').startup(function(use)
   -- }
   -- use 'folke/tokyonight.nvim'
   use {
-    "Alexis12119/nightly.nvim",
+    "Mkamvi/nightly.nvim",
     config = function()
     end
   }
