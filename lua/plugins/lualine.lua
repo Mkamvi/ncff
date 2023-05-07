@@ -8,7 +8,8 @@ require('lualine').setup {
         'filename',
         path = 1,
       },
-      'filesize'
+      'filesize',
     },
+    lualine_z = { "os.date('%Y.%m.%d %X %p %A %j/366天')" }
   },
 }
