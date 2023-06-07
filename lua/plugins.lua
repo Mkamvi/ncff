@@ -98,10 +98,10 @@ return require('packer').startup(function(use)
   }
 
   -- Themes
-  -- use {
-  --   'projekt0n/github-nvim-theme',
-  --   config = function() require('plugins.github-theme') end
-  -- }
+  use {
+    'projekt0n/github-nvim-theme',
+    config = function() require('plugins.github-theme') end
+  }
   -- use {
   --   "ellisonleao/gruvbox.nvim",
   --   requires = {"rktjmp/lush.nvim"}

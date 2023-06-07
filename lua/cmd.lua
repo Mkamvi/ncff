@@ -7,5 +7,6 @@ vim.cmd('filetype plugin indent on')
 -- 按照缩进折叠
 vim.cmd [[ set fdm=indent]]
 vim.cmd [[ set foldlevelstart=99]]
-require('plugins.nightly-theme')
-vim.cmd "colorscheme nightly"
+-- require('plugins.nightly-theme')
+require('plugins.github-theme')
+vim.cmd "colorscheme github_dark"
