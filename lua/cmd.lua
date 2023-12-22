@@ -8,5 +8,6 @@ vim.cmd('filetype plugin indent on')
 vim.cmd [[ set fdm=indent]]
 vim.cmd [[ set foldlevelstart=99]]
 -- require('plugins.nightly-theme')
-require('plugins.github-theme')
-vim.cmd "colorscheme github_dark"
+-- require('plugins.github-theme')
+-- vim.cmd "colorscheme github_dark"
+-- vim.cmd('colorscheme tokyonight-moon')

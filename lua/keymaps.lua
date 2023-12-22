@@ -19,15 +19,15 @@ vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<cr>')
 vim.keymap.set('n', '<leader>ef', ':NvimTreeFocus<cr>')
 
 -- Telescope
-vim.keymap.set('n', '<leader>ff', function()
-  require'telescope.builtin'.find_files {}
-end)
-vim.keymap.set('n', '<leader>gf', function()
-  require'telescope.builtin'.git_files {}
-end)
-vim.keymap.set('n', '<leader>bf', function()
-  require'telescope.builtin'.buffers {}
-end)
+-- vim.keymap.set('n', '<leader>ff', function()
+--   require'telescope.builtin'.find_files {}
+-- end)
+-- vim.keymap.set('n', '<leader>gf', function()
+--   require'telescope.builtin'.git_files {}
+-- end)
+-- vim.keymap.set('n', '<leader>bf', function()
+--   require'telescope.builtin'.buffers {}
+-- end)
 
 -- window resize
 vim.keymap.set('n', '<leader>wx', ':x<cr>')
@@ -79,7 +79,7 @@ vim.keymap.set('n', '<leader>-1', function() require("bufferline").go_to_buffer(
 
 -- 编辑
 vim.keymap.set('i', '<C-s>', '<ESC>:w<CR>')
-vim.keymap.set('n', '<leader>f', '<ESC>:Prettier<CR>')
+vim.keymap.set('n', '<leader>f', '<ESC>:Format<CR>')
 vim.keymap.set('n', '<C-s>', '<ESC>:w<CR>')
 vim.keymap.set('n', '<C-l>', ':set invrelativenumber<cr>')
 
@@ -91,10 +91,30 @@ vim.keymap.set('n', '<leader>l', ':HopLine<CR>')
 vim.keymap.set('n', '<leader>w', ':HopWord<CR>')
 vim.keymap.set('n', '<leader>lw', ':HopWordCurrentLine<CR>')
 
+-- hlslens
+vim.keymap.set('n', '<leader>ns', '<Cmd>noh<CR>')
+
 -- DAP
 vim.keymap.set('n', '<leader>db', function ()
-  require'dap'.continue() 
+  -- require'dap'.continue() 
 end)
 vim.keymap.set('n', '<leader>dbs', function ()
-  require'dap'.toggle_breakpoint()
+  -- require'dap'.toggle_breakpoint()
 end)
+
+
+vim.keymap.set('n', '<leader>td', function ()
+  vim.cmd('colorscheme github_dark_default')
+end)
+
+vim.keymap.set('n', '<leader>tl', function ()
+  vim.cmd('colorscheme github_light')
+end)
+
+-- Trouble
+vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
+vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
+vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
+vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
+vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
+vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)

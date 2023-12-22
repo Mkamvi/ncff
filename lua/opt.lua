@@ -15,9 +15,6 @@ vim.opt.updatetime = 3000
 -- 自动写入
 -- vim.opt.autowrite = true
 
--- 真色彩
-vim.opt.termguicolors = true
-
 -- tab
 vim.opt.autoindent = true
 vim.opt.tabstop = 2
