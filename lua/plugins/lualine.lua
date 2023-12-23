@@ -10,6 +10,6 @@ require('lualine').setup {
       },
       'filesize',
     },
-    lualine_z = { "os.date('%Y.%m.%d %X %p %A %j/366天')" }
+    lualine_z = { "os.date('%Y.%m.%d %X')" }
   },
 }
