@@ -225,8 +225,19 @@ require("lazy").setup({
 					yaml = {
 						require("formatter.filetypes.yaml").prettier,
 					},
+					markdown = {
+						require("formatter.filetypes.markdown").prettier,
+					},
 				},
 			})
+		end,
+	},
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		ft = { "markdown" },
+		build = function()
+			vim.fn["mkdp#util#install"]()
 		end,
 	},
 	-- "microsoft/vscode-js-debug",

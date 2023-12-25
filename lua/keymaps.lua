@@ -124,7 +124,7 @@ vim.keymap.set("n", "<leader>dbs", function()
 end)
 
 vim.keymap.set("n", "<leader>td", function()
-	vim.cmd("colorscheme github_dark_default")
+	vim.cmd("colorscheme github_dark_tritanopia")
 end)
 
 vim.keymap.set("n", "<leader>tl", function()
