@@ -1,4 +1,3 @@
-
 -- 展示行号
 vim.opt.number = true
 -- 相对行号
@@ -21,13 +20,13 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 -- 允许使用鼠标(a: all)
-vim.opt.mouse = 'ni'
+vim.opt.mouse = "ni"
 -- 替换tab
 vim.opt.expandtab = true
 
 vim.opt.list = true
-vim.opt.listchars:append "eol:↴"
-vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append("eol:↴")
+vim.opt.listchars:append("space:⋅")
 
 -- 剪切板
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"

@@ -14,28 +14,10 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins
 require("lazy").setup({
-	"nvim-lua/plenary.nvim",
 	{
 		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup()
-		end,
-	},
-	{
-		"hrsh7th/nvim-cmp",
-		-- event = 'InsertEnter',
-		event = "VeryLazy",
-		dependencies = {
-			"hrsh7th/cmp-nvim-lsp",
-			"onsails/lspkind-nvim",
-			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-omni",
-			"hrsh7th/cmp-emoji",
-			"quangnguyen30192/cmp-nvim-ultisnips",
-		},
-		config = function()
-			require("plugins.nvim-cmp")
 		end,
 	},
 	{
@@ -44,23 +26,25 @@ require("lazy").setup({
 			require("plugins.lspconfig")
 		end,
 	},
-	{ "SirVer/ultisnips", dependencies = {
-		"honza/vim-snippets",
-	}, event = "InsertEnter" },
-	-- {
-	-- 	"L3MON4D3/LuaSnip",
-	-- 	-- dependencies = { "rafamadriz/friendly-snippets" },
-	-- 	-- follow latest release.
-	-- 	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-	-- 	-- install jsregexp (optional!).
-	-- 	build = "make install_jsregexp",
-	-- 	config = function()
-	-- 		-- require("luasnip.loaders.from_vscode").lazy_load()
-	-- 		require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/nvim/.vsnip" } })
-	-- 		-- require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.g.vsnip_snippet_dir } })
-	-- 	end,
-	-- },
-	-- "saadparwaiz1/cmp_luasnip",
+	{
+		"hrsh7th/nvim-cmp",
+		event = "VeryLazy",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-cmdline",
+			"onsails/lspkind-nvim",
+			"hrsh7th/cmp-omni",
+			"hrsh7th/cmp-emoji",
+			"hrsh7th/cmp-vsnip",
+			"hrsh7th/vim-vsnip",
+		},
+		config = function()
+			require("plugins.nvim-cmp")
+		end,
+	},
+	{ "rafamadriz/friendly-snippets" },
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
