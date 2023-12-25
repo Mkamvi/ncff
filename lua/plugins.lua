@@ -240,6 +240,7 @@ require("lazy").setup({
 			vim.fn["mkdp#util#install"]()
 		end,
 	},
+	{ "jdhao/better-escape.vim", event = "InsertEnter" },
 	-- "microsoft/vscode-js-debug",
 	-- "mfussenegger/nvim-dap",
 	-- "mxsdev/nvim-dap-vscode-js",
