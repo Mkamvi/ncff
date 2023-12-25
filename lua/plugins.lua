@@ -201,6 +201,30 @@ require("lazy").setup({
 					html = {
 						require("formatter.filetypes.html").htmlbeautifier,
 					},
+					vue = {
+						require("formatter.filetypes.vue").prettier,
+					},
+					typescriptreact = {
+						require("formatter.filetypes.typescriptreact").prettier,
+					},
+					javascriptreact = {
+						require("formatter.filetypes.javascriptreact").prettier,
+					},
+					javascript = {
+						require("formatter.filetypes.javascript").prettier,
+					},
+					json = {
+						require("formatter.filetypes.json").prettier,
+					},
+					css = {
+						require("formatter.filetypes.css").prettier,
+					},
+					typescript = {
+						require("formatter.filetypes.typescript").prettier,
+					},
+					yaml = {
+						require("formatter.filetypes.yaml").prettier,
+					},
 				},
 			})
 		end,
