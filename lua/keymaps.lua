@@ -45,9 +45,13 @@ vim.keymap.set("n", "<leader>pc", ":PackerClean<cr>")
 
 -- t: terminal
 vim.keymap.set("t", "<C-g>", "<C-\\><C-n>")
+vim.keymap.set("t", "jk", "<C-\\><C-n>")
+vim.keymap.set("n", "<leader>tv", ":ToggleTerm size=60 direction=vertical <cr>")
+vim.keymap.set("n", "<leader>th", ":ToggleTerm direction=horizontal <cr>")
+vim.keymap.set("n", "<leader>tf", ":ToggleTerm direction=float <cr>")
 
 -- h: git
-vim.keymap.set("n", "<leader>hs", "::Gitsigns stage_hunk<cr>")
+vim.keymap.set("n", "<leader>hs", ":Gitsigns stage_hunk<cr>")
 vim.keymap.set("n", "<leader>hu", ":Gitsigns undo_stage_hunk<cr>")
 vim.keymap.set("n", "<leader>hn", ":Gitsigns next_hunk<cr>")
 vim.keymap.set("n", "<leader>hc", ":Gitsigns preview_hunk<cr>")
@@ -117,10 +121,10 @@ vim.keymap.set("n", "<leader>ns", "<Cmd>noh<CR>")
 
 -- DAP
 vim.keymap.set("n", "<leader>db", function()
-	-- require'dap'.continue()
+	require("dap").continue()
 end)
 vim.keymap.set("n", "<leader>dbs", function()
-	-- require'dap'.toggle_breakpoint()
+	require("dap").toggle_breakpoint()
 end)
 
 vim.keymap.set("n", "<leader>td", function()
