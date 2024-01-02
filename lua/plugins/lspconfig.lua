@@ -215,4 +215,12 @@ lsp.handlers["textDocument/hover"] = lsp.with(vim.lsp.handlers.hover, {
 	border = "rounded",
 })
 
-require("lspconfig").tsserver.setup({})
+require("lspconfig").tsserver.setup({
+	capabilities = capabilities,
+})
+require("lspconfig").cssls.setup({
+	capabilities = capabilities,
+})
+require("lspconfig").cssmodules_ls.setup({
+	capabilities = capabilities,
+})
