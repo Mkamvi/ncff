@@ -104,6 +104,10 @@ end)
 
 -- 编辑
 vim.keymap.set("i", "<C-s>", "<ESC>:w<CR>")
+vim.keymap.set("i", "<C-h>", "<Left>")
+vim.keymap.set("i", "<C-l>", "<Right>")
+vim.keymap.set("i", "<C-j>", "<Down>")
+vim.keymap.set("i", "<C-k>", "<Up>")
 vim.keymap.set("n", "<leader>f", "<ESC>:Format<CR>")
 vim.keymap.set("n", "<C-s>", "<ESC>:w<CR>")
 vim.keymap.set("n", "<C-l>", ":set invrelativenumber<cr>")
