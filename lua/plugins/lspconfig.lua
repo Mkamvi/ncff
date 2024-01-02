@@ -214,3 +214,5 @@ diagnostic.config({
 lsp.handlers["textDocument/hover"] = lsp.with(vim.lsp.handlers.hover, {
 	border = "rounded",
 })
+
+require("lspconfig").tsserver.setup({})
