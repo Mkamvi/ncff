@@ -7,3 +7,8 @@ vim.g.vsnip_snippet_dir = '~/.config/nvim/.vsnip'
 
 -- 修复commentstring警告
 vim.g.skip_ts_context_commentstring_module = true
+
+-- neovide 配置
+vim.g.neovide_transparency = 0.80
+vim.g.neovide_fullscreen = true
+vim.g.neovide_scale_factor = 0.7
