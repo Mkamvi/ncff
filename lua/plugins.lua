@@ -82,8 +82,7 @@ require("lazy").setup({
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		config = function()
-		end,
+		config = function() end,
 	},
 	{
 		"folke/tokyonight.nvim",
@@ -125,6 +124,9 @@ require("lazy").setup({
 			-- or leave it empty to use the default settings
 			-- refer to the configuration section below
 		},
+		config = function()
+			require("plugins.which-key")
+		end,
 	},
 	{
 		"windwp/nvim-spectre",
@@ -240,6 +242,7 @@ require("lazy").setup({
 		end,
 	},
 	{ "jdhao/better-escape.vim", event = "InsertEnter" },
+	{ "LudoPinelli/comment-box.nvim" },
 	-- "microsoft/vscode-js-debug",
 	-- "mfussenegger/nvim-dap",
 	-- "mxsdev/nvim-dap-vscode-js",
