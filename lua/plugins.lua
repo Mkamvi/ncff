@@ -269,4 +269,5 @@ require("lazy").setup({
 			-- add any custom options here
 		},
 	},
+	"jiangmiao/auto-pairs",
 })
