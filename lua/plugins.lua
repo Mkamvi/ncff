@@ -283,4 +283,16 @@ require("lazy").setup({
 		event = "InsertEnter",
 		opts = {}, -- this is equalent to setup({}) function
 	},
+	{
+		"nathom/filetype.nvim",
+		config = function()
+			require("filetype").setup({
+				overrides = {
+					extensions = {
+						rtsx = "typescriptreact",
+					},
+				},
+			})
+		end,
+	},
 })
