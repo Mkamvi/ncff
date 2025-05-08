@@ -229,6 +229,20 @@ require("lazy").setup({
 					markdown = {
 						require("formatter.filetypes.markdown").prettier,
 					},
+					svg = {
+						function()
+							return {
+								exe = "npx prettier",
+								args = {
+									"--stdin-filepath",
+									vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+									"--parser",
+									"xml",
+								},
+								stdin = true,
+							}
+						end,
+					},
 				},
 			})
 		end,
@@ -290,6 +304,8 @@ require("lazy").setup({
 				overrides = {
 					extensions = {
 						rtsx = "typescriptreact",
+						uvue = "vue",
+						uts = "typescript",
 					},
 				},
 			})
