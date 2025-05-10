@@ -9,8 +9,9 @@ vim.g.vsnip_snippet_dir = '~/.config/nvim/.vsnip'
 vim.g.skip_ts_context_commentstring_module = true
 
 -- neovide 配置
--- vim.g.neovide_transparency = 0.80
--- vim.g.neovide_fullscreen = true
-vim.g.neovide_scale_factor = 0.7
+vim.g.neovide_opacity = 0.98
+vim.g.neovide_fullscreen = true
+vim.g.neovide_scale_factor = 0.8
+
 vim.g.neovide_cursor_animation_length = 0
 vim.g.neovide_hide_mouse_when_typing = true

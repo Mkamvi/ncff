@@ -9,7 +9,7 @@ local lazygit = Terminal:new({
 	count = 5,
 	direction = "float",
 	float_opts = {
-		border = "double",
+		border = "curved",
 		width = 200,
 		height = 60,
 	},
