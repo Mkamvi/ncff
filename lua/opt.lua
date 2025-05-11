@@ -20,7 +20,7 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 -- 允许使用鼠标(a: all)
-vim.opt.mouse = "ni"
+vim.opt.mouse = ""
 -- 替换tab
 vim.opt.expandtab = true
 
