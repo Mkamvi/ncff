@@ -41,6 +41,8 @@ local powershell_options = {
   shellxquote = "",
 }
 
-for option, value in pairs(powershell_options) do
-  vim.opt[option] = value
+if vim.loop.os_uname().sysname == "Windows_NT" then
+  for option, value in pairs(powershell_options) do
+    vim.opt[option] = value
+  end
 end
