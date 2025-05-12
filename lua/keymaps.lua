@@ -12,6 +12,7 @@ local lazygit = Terminal:new({
 		border = "curved",
 		width = 200,
 		height = 60,
+		winblend = 0,
 	},
 })
 

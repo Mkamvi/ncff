@@ -38,7 +38,7 @@ require("toggleterm").setup({
 		-- like `size`, width and height can be a number or function which is passed the current terminal
 		width = 140,
 		height = 50,
-		winblend = 88,
+		winblend = 0,
 	},
 	winbar = {
 		enabled = false,
